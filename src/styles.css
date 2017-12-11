@@ -1,0 +1,195 @@
+/*============================
+		General Style
+==============================*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+	font-family: sans-serif;
+	text-align: left;
+	font-size: 14px;
+	line-height: 17px;
+	word-wrap: break-word;
+	color: #666;
+	background: #fff;
+	overflow-x: hidden;
+	font-weight: 300;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 15px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 15px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 15px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*============================
+		Typography
+==============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 15px;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none !important;
+	color: #343536;
+}
+
+a:focus {
+	outline: 0 solid
+}
+
+a:hover {
+	text-decoration: none
+}
+
+p {
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #888;
+	line-height: 24px;
+	font-weight: 400;
+	left: -1px;
+	margin-top: 20px;
+}
+
+/*============================
+		Custom CSS
+==============================*/
+.cal .col-md-4,.cal .col-md-12 {
+    padding: 2px;
+}
+.cal button.btn {
+	width: 100%;
+	margin-top: 0px;
+	height: 60px;
+	font-size: 25px;
+	border-radius: 0;
+}
+.cal button.btn.btn-success {
+	font-size: 28px;
+}
+.cal .form-control {
+	height: 70px;
+	font-size: 25px;
+	border: 3px solid #ccc;
+	margin-top: 100px;
+	text-align: right;
+	margin-bottom: 25px;
+	border-radius: 0px;
+}
+.details {
+	margin-top: 120px;
+}
+.details button.btn {
+    width: 48%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 7.5px;
+}
+.details .form-control {
+	border: 3px solid #ccc;
+}
+
+/*============================
+	Custom CSS Retail Screen
+==============================*/
+
+.btn-custom {
+	width: 55px !important;
+	font-size: 10px;
+	margin-left: 3px;
+}
+
+.text-style {
+	font-weight: bold;
+}
+
+.custom-area {
+	background-color: gray;
+	height: 400px;
+	margin-left: 10px;
+	margin-right: 10px; 
+	margin-top: 5px; 
+}
+
+.total-area {
+	background-color: black;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: Arial, sans-serif;
+	height: 130px;
+	color: #33FFCE;
+	padding-top: 10px;
+	padding-left: 3px;
+}
+
+.table-class {  
+    height: 100px !important;
+    overflow: scroll;
+}
+
+.FixedHeightContainer
+{
+  height: 400px; 
+
+}
+
+.Content
+{
+  height:350px;
+  width: 100%;
+  overflow:auto;
+  background:#fff;
+}
+
+.btn-style {
+	padding-right: 2px;
+	padding-left: 2px;
+	margin-bottom: 3px;
+	height: 55px;
+	width: 64px !important;
+	font-weight: bold;
+}
+
+.button-area {
+	margin-left: 10px;
+	margin-right: 10px; 
+	margin-top: 5px; 
+}
+
+.button-pay {
+	background-color: #33FF61;
+	height: 110px;
+    width: 100px !important;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.ui-autocomplete .ui-autocomplete-input {
+    padding-right: 0.5em;
+}
+
+.admin-btn {
+	width: 82px !important;
+}

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - "./app:/usr/src/app"
+    environment:
+      - MONGODB_HOST=mongodb://mongo
+    ports:
+      - "3232:3232"
+    links:
+      - mongo:mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"

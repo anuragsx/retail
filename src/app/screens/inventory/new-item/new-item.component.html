@@ -1,0 +1,445 @@
+<section class="table-area">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <div class="btn-group">
+            <button class="btn btn-info" (click)="new()"><i class="glyphicon glyphicon-plus"></i> New</button>
+            <button class="btn btn-success" (click)="save()"><i class="glyphicon glyphicon-ok"></i>  Save</button>
+            <button class="btn btn-warning" (click)="cancel()"><i class="ion-ios-undo"></i> Cancel</button>
+            <button class="btn btn-danger" disabled="disabled"><i class="glyphicon glyphicon-remove"></i> Delete</button>
+            <button class="btn btn-info"><i class="glyphicon glyphicon-import"></i> Import</button>
+            <button class="btn btn-info"><i class="glyphicon glyphicon-search"></i> Search</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+            <form [formGroup]="formGroup" (ngSubmit)="onFormSubmit(formGroup.value, formGroup.valid)">
+                <div class="form-group input-group-md">
+                    <!-- <label for="description">Description</label> -->
+                    <input type="text" formControlName="description" class="form-control" id="description" placeholder="Description">
+                </div>
+
+                <div class="form-group input-group-md">
+                    <!-- <label for="barCode2">Bar Code2</label> -->
+                    <input type="text" formControlName="additionalDescription1" class="form-control" id="additional_description1" placeholder="Additional descriptopn 1">
+                </div>
+
+                <div class="form-group input-group-md">
+                    <!-- <label for="barCode2">Bar Code2</label> -->
+                    <input type="text" formControlName="additionalDescription2" class="form-control" id="additional_description2" placeholder="Additional descriptopn 2">
+                </div>
+
+                <div class="form-group input-group-md">
+                    <input type="text" formControlName="reference" class="form-control" id="reference" name="reference" placeholder="Reference">
+                </div>
+
+                <div class="form-group input-group-md">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <!-- <label for="barCode">Bar Code</label> -->
+                      <input type="text" formControlName="barCode"  class="form-control input-md" id="barCode" placeholder="Bar Code">
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <label for="type">Type</label> -->
+                        <input type="text" formControlName="type" class="form-control input-md" id="type" placeholder="Type">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group input-group-md">
+                            <!-- <label for="item">Item</label> -->
+                            <select id="item" class="form-control input-md">
+                                <option value="-1">Item select...</option>
+                            </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-8">
+            <form>
+                <div class="form-group input-group-md">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <input type="text" class="form-control" id="department" placeholder="Department">
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn  btn-sm btn-success">
+                          <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                  </div>
+                  </div>
+                </div>
+                  <div class="form-group input-group-md">
+                      <div class="row">
+                          <div class="col-md-10">
+                    <input type="text" class="form-control" id="section" placeholder="Section">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn  btn-sm btn-success">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group input-group-md">
+                      <div class="row">
+                          <div class="col-md-10">
+                      <input type="text" class="form-control" id="family" placeholder="Family">
+                      </div>
+                      <div class="col-md-2">
+                          <button class="btn  btn-sm btn-success">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="form-group input-group-md">
+                      <div class="row">
+                          <div class="col-md-10">
+                      <input type="text" class="form-control" id="subfamily" placeholder="Subfamily">
+                      </div>
+                      <div class="col-md-2">
+                          <button class="btn  btn-sm btn-success">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="form-group input-group-md">
+                      <div class="row">
+                          <div class="col-md-10">
+                      <input type="text" class="form-control" id="brand" placeholder="Brand">
+                      </div>
+                      <div class="col-md-2">
+                          <button class="btn  btn-sm btn-success">
+                              <i class="glyphicon glyphicon-search"></i>
+                          </button>
+                      </div>
+                      </div>
+                  </div>
+            </form>
+            </div>
+            <!--<div class="col-md-2">
+                <form>
+                  <div class="form-group input-group-md">
+                    <button class="btn  btn-sm btn-success">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                  <div class="form-group input-group-md">
+                    <button class="btn  btn-sm btn-success">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                  <div class="form-group input-group-md">
+                    <button class="btn  btn-sm btn-success">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                  <div class="form-group input-group-md">
+                    <button class="btn  btn-sm btn-success">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                  <div class="form-group input-group-md">
+                      <button class="btn btn-sm btn-success">
+                          <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                  </div>
+                </form>
+            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a aria-controls="tab1" role="tab" data-toggle="tab" href="javascript:void(0)">
+                    <i class="ion-android-create"></i> ADDITIONAL DATA
+                </a>
+            </li>
+            <li role="presentation">
+                <a aria-controls="tab2" role="tab" data-toggle="tab" href="javascript:void(0)">
+                    <i class="ion-social-usd"></i> COSTS/PRICES
+                </a>
+            </li>
+            <li role="presentation">
+                <a aria-controls="tab3" role="tab" data-toggle="tab" href="javascript:void(0)">
+                  FORMATS
+                </a>
+            </li>
+            <li role="presentation">
+                <a aria-controls="tab4" role="tab" data-toggle="tab" href="javascript:void(0)">
+                  YIELD
+                </a>
+            </li>
+            <li role="presentation">
+                <a aria-controls="tab5" role="tab" data-toggle="tab" href="javascript:void(0)">
+                  STOCKS
+                </a>
+            </li>
+            <li role="presentation">
+                <a aria-controls="tab6" role="tab" data-toggle="tab" href="javascript:void(0)">
+                  <i class="ion-compose"></i> COMMENTS
+                </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="tab1">
+                <div class="row">
+                  <div class="col-md-2">
+                    <form  >
+                        <div class="form-group input-group-md">
+                            <!-- <label for="additional_desc">Addititonal Desc</label> -->
+                            <input type="text" class="form-control" id="additional_desc" placeholder="Addititonal Desc">
+                        </div>
+                          <div class="form-group input-group-md">
+                            <!-- <label for="sale_tax">Sale Tax</label> -->
+                            <input type="text" class="form-control" id="sale_tax" placeholder="Sale Tax">
+                          </div>
+                          <div class="form-group input-group-md">
+                              <!-- <label for="purchace_tax">Purchase Tax</label> -->
+                              <input type="text" class="form-control" id="purchace_tax" placeholder="Purchase Tax">
+                          </div>
+                          <div class="form-group input-group-md">
+                              <!-- <label for="duration">Duration</label> -->
+                              <input type="text" class="form-control" id="duration" placeholder="Duration">
+                            </div>
+                            <div class="form-group input-group-md">
+                                <!-- <label for="purchace_units">Purchace Units</label> -->
+                                <input type="text" class="form-control" id="purchace_units" placeholder="Purchace Units">
+                              </div>
+                    </form>
+                  </div>
+                  <div class="col-md-2">
+                      <form>
+                            <div class="form-group input-group-md">
+                                <!-- <label for="sale_units">Sale Units</label> -->
+                                <input type="text" class="form-control" id="sale_units" placeholder="Sale Units">
+                            </div>
+                            <div class="form-group input-group-md">
+                                <!-- <label for="transfer_qty">Transfer QTY</label> -->
+                                <input type="text" class="form-control" id="transfer_qty" placeholder="Transfer QTY">
+                            </div>
+                            <div class="form-group input-group-md">
+                                <!-- <label for="labels_design">Labels Design</label> -->
+                                <input type="text" class="form-control" id="labels_design" placeholder="Labels Design">
+                              </div>
+                              <div class="form-group input-group-md">
+                                  <!-- <label for="customs_code">Customs Code</label> -->
+                                  <input type="text" class="form-control" id="customs_code" placeholder="Customs Code">
+                              </div>
+                              <div class="form-group input-group-md">
+                                  <select class="form-control">
+                                      <option value="-1">Item Subtitle...</option>
+                                    </select>
+                              </div>
+                      </form>
+                  </div>
+                  <div class="col-md-2">
+                      <form>
+                          <div class="form-group input-group-md">
+                              <!-- <label for="minimum_price">Minimum Price</label> -->
+                              <input type="text" class="form-control" id="minimum_price" placeholder="Minimum Price">
+                            </div>
+                            <div class="form-group input-group-md">
+                              <!-- <label for="maximum_price">Maximum Price</label> -->
+                              <input type="text" class="form-control" id="maximum_price" placeholder="Maximum Price">
+                            </div>
+                      </form>
+                  </div>
+                  <div class="col-md-2 p-0">
+                      <form>
+                          <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                The item has stock
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Tax 1
+                                </label>
+                              </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Tax 2
+                                </label>
+                              </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Tax 3
+                                </label>
+                              </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Visible on Web
+                                </label>
+                              </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Ask for price
+                                </label>
+                              </div>
+                          </div>
+                          <div class="form-group input-group-md">
+                              <div class="form-check">
+                                <label class="form-check-label ">
+                                  <input type="checkbox" class="form-check-input big-checkbox">
+                                  Ask for description
+                                </label>
+                              </div>
+                          </div>
+
+                      </form>
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <form action="">
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                It is sold with free price
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Request comment in points of sale
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Does not allow discounts
+                              </label>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Custom tax field from the tax table
+                              </label>
+                            </div>
+                        </div> -->
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Custom tax field from the tax table
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Ask for customer name
+                              </label>
+                            </div>
+                        </div>
+
+                    </form>
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <form action="">
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Ask for Qty
+                              </label>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Discount not allowed
+                              </label>
+                            </div>
+                        </div> -->
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Barcoded
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Foodstamble
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Auto wieght
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Never print in kitchen
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Check ID 1
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group input-group-md">
+                            <div class="form-check">
+                              <label class="form-check-label ">
+                                <input type="checkbox" class="form-check-input big-checkbox">
+                                Check ID 2
+                              </label>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="tab2">...</div>
+              <div role="tabpanel" class="tab-pane" id="tab3">...</div>
+              <div role="tabpanel" class="tab-pane" id="tab4">...</div>
+            </div>
+        </div>
+      </div>
+
+  </div>
+</section>

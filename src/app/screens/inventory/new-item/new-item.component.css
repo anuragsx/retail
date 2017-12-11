@@ -1,0 +1,59 @@
+.btn {
+  padding: 10px;
+}
+.form-group {
+  margin-bottom: 5px;
+}
+.tab-content {
+  padding-top: 5px;
+}
+.btn-group {
+  padding: 20px;
+}
+.btn-group>button {
+  margin-right: 15px;
+}
+
+.nav-tabs>li {
+  background: #5b87df;
+
+}
+.nav-tabs>li a:hover {
+  background:#5b87df;
+  border: 1px solid #5b87df;
+  text-decoration: none;
+}
+.nav-tabs>li:last-child {
+  border-top-right-radius: 0px;
+  /* border-bottom-right-radius: 15px; */
+}
+.nav-tabs>li:first-child {
+  border-top-left-radius: 0px;
+  /* border-bottom-right-radius: 15px; */
+}
+.nav-tabs>li:last-child a {
+  border-top-right-radius: 15px;
+}
+.nav-tabs>li:not(.active) a {
+  color: #fff;
+}
+
+.input-group-lg>.form-control {
+  border-radius: 0px;
+}
+
+.big-checkbox {
+  width: 20px;
+  height: 19px;
+}
+
+.nav>li>a {
+  padding: 10px 34px;
+}
+.form-control {
+  border-radius: 0px;
+}
+
+.p-0 {
+  padding: 0px;
+}

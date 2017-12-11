@@ -1,0 +1,32 @@
+.action-bar-container {
+  margin: 10px;
+}
+
+.action-bar {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 9px;
+}
+
+.action-bar-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.action-bar-btn {
+  font-size: 16px;
+}
+
+.left-column {
+  width: 48%;
+  float: left;
+}
+
+.right-column {
+  width: 48%;
+  float: right;
+}
+
+.vendor-form-input {
+  margin-bottom: 10px;
+}

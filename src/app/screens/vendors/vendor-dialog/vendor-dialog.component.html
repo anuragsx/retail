@@ -1,0 +1,49 @@
+<div #modal id="create-edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form #vendorForm="ngForm">
+          <div class="vendor-form clearfix">
+            <div class="left-column form-group">
+              <input name="companyName" class="vendor-form-input form-control" placeholder="Company name"
+                     [(ngModel)]="vendor.name" required>
+              <input name="address" class="vendor-form-input form-control" placeholder="Company Address"
+                     [(ngModel)]="vendor.address">
+              <input name="zip" class="vendor-form-input form-control" placeholder="City, State, Zip"
+                     [(ngModel)]="vendor.address2">
+              <input name="phoneNumber" type="tel" class="vendor-form-input form-control" placeholder="Phone Number"
+                     [(ngModel)]="vendor.phoneNumber" required pattern="\(?([0-9]*)\)?([ .-]?)([0-9]*)\2([0-9]*)">
+              <input name="website" type="url" class="vendor-form-input form-control" placeholder="Website"
+                     [(ngModel)]="vendor.website" pattern="https?://.+">
+            </div>
+            <div class="right-column form-group">
+              <input name="salesman" class="vendor-form-input form-control" placeholder="Salesman"
+                     [(ngModel)]="vendor.salesman">
+              <input name="salesmanExt" class="vendor-form-input form-control" placeholder="Salesman Ext"
+                     [(ngModel)]="vendor.salesmanExt">
+              <input name="salesmanMobileNumber" type="tel" class="vendor-form-input form-control" placeholder="Mobile Number"
+                     [(ngModel)]="vendor.salesmanMobileNumber" pattern="\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})">
+              <input name="salesmanEmail" type="email" class="vendor-form-input form-control" placeholder="Email"
+                     [(ngModel)]="vendor.salesmanEmail" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            </div>
+          </div>
+          <label for="term-select">Term</label>
+          <select name="term" id="term-select" [(ngModel)]="vendor.term" required>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+            <option value="60">60</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button (click)="clear()" type="button" class="btn btn-secondary">Clear</button>
+        <button type="button" class="action-dialog-btn btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button *ngIf="isCreateMode()" (click)="create()" type="button" class="action-dialog-btn btn btn-primary"
+                [disabled]="!vendorForm.valid">Save</button>
+        <button *ngIf="!isCreateMode()" (click)="edit()" type="button" class="action-dialog-btn btn btn-primary"
+                [disabled]="!vendorForm.valid">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

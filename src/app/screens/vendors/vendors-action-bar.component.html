@@ -1,0 +1,19 @@
+<div class="action-bar-container">
+  <ul class="action-bar">
+    <li class="action-bar-item">
+      <button class="action-bar-btn btn btn-success" (click)="showCreateDialog()">
+        New vendor
+      </button>
+    </li>
+    <li class="action-bar-item">
+      <button class="action-bar-btn btn btn-warning" (click)="showEditDialog()" [disabled]="!selectedVendor">
+        Edit vendor
+      </button>
+    </li>
+    <li class="action-bar-item">
+      <button class="action-bar-btn btn btn-danger" (click)="delete()" [disabled]="!selectedVendor">
+        Delete vendor
+      </button>
+    </li>
+  </ul>
+</div>

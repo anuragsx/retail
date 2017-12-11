@@ -1,0 +1,8 @@
+.vendor-table-row {
+  cursor: pointer;
+}
+
+.table-striped>tbody>tr.selected-row:nth-of-type(odd),
+.selected-row {
+  background-color: #b3e5fc;
+}

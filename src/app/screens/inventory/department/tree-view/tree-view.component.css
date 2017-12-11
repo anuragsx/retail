@@ -1,0 +1,17 @@
+.recTitle {
+    fill:rgb(107, 107, 243);
+    stroke-width:1;
+    stroke:rgb(0,0,0);
+    cursor: pointer;
+}  
+
+.recTitleSelect {
+    fill:rgb(3, 255, 16);
+    stroke-width:1;
+    stroke:rgb(0,0,0);
+    cursor: pointer;
+}  
+
+.txtTitle {
+    cursor: pointer;
+}

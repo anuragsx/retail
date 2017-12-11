@@ -1,0 +1,26 @@
+#create-edit-modal {
+  display: none;
+  outline: none;
+}
+
+.modal-dialog {
+  z-index: 1500;
+}
+
+.left-column {
+  width: 48%;
+  float: left;
+}
+
+.right-column {
+  width: 48%;
+  float: right;
+}
+
+.vendor-form-input {
+  margin-bottom: 10px;
+}
+
+.action-dialog-btn {
+  font-size: 16px;
+}

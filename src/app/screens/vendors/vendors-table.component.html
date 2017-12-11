@@ -1,0 +1,25 @@
+<app-vendors-action-bar [selectedVendor]="selectedVendor"></app-vendors-action-bar>
+<div class="table-responsive">
+  <table #vendorTable class="table table-striped dataTable">
+    <thead>
+    <tr>
+      <th>Vendor name</th>
+      <th>Vendor number</th>
+      <th>Salesman</th>
+      <th>Salesman Contact Number</th>
+      <th>Percentage of products</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let vendor of vendors | async" (click)="selectedVendor = vendor"
+        class="vendor-table-row" [ngClass]="selected(vendor)">
+      <th>{{vendor.name}}</th>
+      <th>{{vendor.phoneNumber}}</th>
+      <th>{{vendor.salesman}}</th>
+      <th>{{vendor.salesmanMobileNumber}}</th>
+      <th>{{vendor.term}}</th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-vendor-dialog></app-vendor-dialog>

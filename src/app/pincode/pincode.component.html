@@ -1,0 +1,76 @@
+<div class="calculater-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+
+        <form class="cal" [formGroup]="form" (ngSubmit)="checkPincode(form.value)">
+          <div class="row">
+            <div class="col-md-12">
+              <input class="form-control" formControlName="pincode" placeholder="****" type="password" name="pincode" id="">
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(1)">1</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(2)">2</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(3)">3</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(4)">4</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(5)">5</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(6)">6</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(7)">7</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(8)">8</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(9)">9</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-warning" (click)="clearDigits()">Clear</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-success" (click)="placeNumber(0)">0</button>
+            </div>
+            <div class="col-md-4">
+              <button type="submit" [disabled]="!form.controls['pincode'].valid" class="btn btn-info">Enter</button>
+            </div>
+          </div>
+        </form>
+        <div class="error-message">{{ _api.errorMessage }}</div>
+        <div class="error-message">{{ _auth.ERROR_MESSAGE }}</div>
+      </div>
+    </div>
+    <div class="row details">
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-primary">Oder Pick</button>
+        <button type="submit" class="btn btn-primary">Floor</button>
+      </div>
+      <div class="col-md-4 col-md-offset-1 ">
+        <textarea rows="3" class="form-control" placeholder="Date and Time">
+          Date: {{ _getDateString() }}
+          Time: {{ _getTimeString() }}
+        </textarea>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <button type="submit" [disabled]="!_auth.isClientLogIn()" routerLink="/screens/manager" class="btn btn-primary">Manager</button>
+        <button type="submit" class="btn btn-primary">Time Card</button>
+      </div>
+    </div>
+  </div>
+</div>

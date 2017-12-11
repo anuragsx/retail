@@ -1,0 +1,71 @@
+<div class="calculater-sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<!-- <div class="back-side">
+
+					</div> -->
+				</div>
+				<div class="col-md-3 col-md-offset-2">
+					<form class="cal" [formGroup]="form">
+						<div class="row">
+							<div class="col-md-12">
+								<input class="form-control" type="text" formControlName="amount" name="amount" id="" placeholder="00.00">
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(1)">1</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(2)">2</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(3)">3</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(4)">4</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(5)">5</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(6)">6</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(7)">7</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(8)">8</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(9)">9</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-warning" (click)="clearDigits()">Clear</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="placeDigit(0)">0</button>
+							</div>
+							<div class="col-md-4">
+								<button type="submit" class="btn btn-success" (click)="formatDigits()">00</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-2 col-md-offset-2 more-btn">
+					<!-- <button type="submit" class="btn btn-info">Cash</button>
+					<button type="submit" class="btn btn-info">Credit</button>
+					<button type="submit" class="btn btn-info">Debit</button>
+					<button type="submit" class="btn btn-info">EBT</button>
+          <button type="submit" class="btn btn-info">Account</button> -->
+          <button type="submit" routerLink="/screens/manager" class="btn btn-info">Manager</button>
+					<button type="submit" (click)="sendPayment()" class="btn btn-success">Done</button>
+				</div>
+			</div>
+		</div>
+	</div>

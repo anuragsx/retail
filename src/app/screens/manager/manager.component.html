@@ -1,0 +1,155 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="side-menu">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+
+              <div class="nav-side-menu">
+
+                <div class="menu-list">
+
+                  <ul id="menu-content" class="menu-content collapse out">
+
+                    <li data-toggle="collapse" data-target="#analytics" class="collapsed active">
+                      <a (click)="openMenu($event, navbars.ANALITICS.MENU1)"><i class="fa fa-dashboard fa-lg"></i>Analytics<span class="arrow"></span></a>
+                    </li>
+
+                    <ul class="sub-menu collapse" id="analytics">
+                      <li [ngClass]="{active: navbars.ANALITICS.MENU1 == activeMenu}"><a (click)="openMenu($event, navbars.ANALITICS.MENU1)">Ana--1</a></li>
+                      <li><a href="javascript:void(0)">Ana--1</a></li>
+                      <li><a href="javascript:void(0)">Ana--1</a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#products" class="collapsed">
+                      <a href="javascript:void(0)"><i class="fa fa-area-chart fa-lg"></i> Reporting <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="products">
+                      <li><a href="javascript:void(0)">SALES</a></li>
+                      <li><a href="javascript:void(0)">Inventory</a></li>
+                      <li><a href="javascript:void(0)">Employees </a></li>
+                    </ul>
+
+
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                      <a ><i class="fa fa-bars fa-lg"></i> Inventory  <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="service">
+                      <li (click)="openMenu($event, navbars.INVENTORY.NEW_ITEM)" [ngClass]="{active: navbars.INVENTORY.NEW_ITEM == activeMenu}"><a href="javascript:void(0)" (click)="openMenu($event, navbars.INVENTORY.NEW_ITEM)">New item </a></li>
+                      <li><a href="javascript:void(0)">Bulk items </a></li>
+                      <li><a href="javascript:void(0)">Combo</a></li>
+                      <li><a href="javascript:void(0)">Mix and Match</a></li>
+                      <li (click)="openMenu($event, navbars.INVENTORY.DEPARTMENT)" [ngClass]="{active: navbars.INVENTORY.DEPARTMENT == activeMenu}"><a href="javascript:void(0)" (click)="openMenu($event, navbars.INVENTORY.DEPARTMENT)" >Departments </a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                      <a href="javascript:void(0)"><i class="fa fa-users fa-lg"></i> Employees  <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="new">
+                      <li><a href="javascript:void(0)">New Employee</a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#settings" class="collapsed"><a href="javascript:void(0)"><i class="fa fa-gears fa-lg"></i>Settings<span class="arrow"></span></a>
+                    </li>
+
+                    <ul class="sub-menu collapse" id="settings">
+                      <li><a href="javascript:void(0)">Hardware </a></li>
+                      <li><a href="javascript:void(0)">Station Settings </a></li>
+                      <li><a href="javascript:void(0)">Combo</a></li>
+                      <li><a href="javascript:void(0)">Store Settings </a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#store" class="collapsed"><a href="javascript:void(0)"><i class="fa fa-cart-plus fa-lg"></i>Online Store<span class="arrow"></span></a>
+                    </li>
+
+                    <ul class="sub-menu collapse" id="store">
+                      <li><a href="javascript:void(0)">any---1 </a></li>
+                      <li><a href="javascript:void(0)">any---2 </a></li>
+                      <li><a href="javascript:void(0)">any---3 </a></li>
+                    </ul>
+
+                    <li data-toggle="collapse" data-target="#administration" class="collapsed"><a href="javascript:void(0)"><i class="fa fa-wrench fa-lg"></i>Administration<span class="arrow"></span></a>
+                    </li>
+
+                    <ul class="sub-menu collapse" id="administration">
+                      <li (click)="openMenu($event, navbars.ADMINISTRATION.VENDORS)"><a href="javascript:void(0)" (click)="openMenu($event, navbars.ADMINISTRATION.VENDORS)">Vendors </a></li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10">
+
+      <div id="container-chart"
+        *ngIf="navbars.ANALITICS.MENU1 == activeMenu"
+        style="min-width: 500px; height: 800px; margin: 0 auto; margin-top: 20px">
+      </div>
+
+      <div id="container">
+        <div *ngIf="navbars.INVENTORY.NEW_ITEM == activeMenu">
+          <app-new-item></app-new-item>
+        </div>
+        <div *ngIf="navbars.INVENTORY.DEPARTMENT == activeMenu">
+          <app-department></app-department>
+        </div>
+        <div *ngIf="navbars.ADMINISTRATION.VENDORS == activeMenu">
+          <app-vendors-table></app-vendors-table>
+        </div>
+      </div>
+
+      <table id="datatable" style="display: none">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Bears</th>
+            <th>Dolphins</th>
+            <th>Whales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Jan</th>
+            <td>5</td>
+            <td>150</td>
+            <td>80</td>
+          </tr>
+          <tr>
+            <th>Feb</th>
+            <td>55</td>
+            <td>75</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <th>Mar</th>
+            <td>75</td>
+            <td>30</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <th>Apr</th>
+            <td>115</td>
+            <td>10</td>
+            <td>75</td>
+          </tr>
+          <tr>
+            <th>May</th>
+            <td>135</td>
+            <td>5</td>
+            <td>90</td>
+          </tr>
+          <tr>
+            <th>Jun</th>
+            <td>185</td>
+            <td>0</td>
+            <td>70</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
